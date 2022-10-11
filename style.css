@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #252D44;
+    overflow: hidden;
 }
 
 main {
