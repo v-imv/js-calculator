@@ -18,6 +18,9 @@ main {
     background: #252D44;
     padding: 18px;
     border-radius: 8px;
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .display, button {
@@ -49,12 +52,6 @@ button:active {
     transform: scale(1.05);
 }
 
-.button-container {
-    display: inline-grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-}
-
 #reset, #equals {
     grid-column: span 2;
 }
@@ -68,4 +65,9 @@ button:active {
     color: #F8F8F8;
     background-color: #1f263b;
     min-height: 80px;
+    word-wrap: break-word;
+}
+
+.display, .button-container {
+    width: 280px;
 }
