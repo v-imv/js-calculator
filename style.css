@@ -55,7 +55,7 @@ button:active {
     grid-template-rows: repeat(5, 1fr);
 }
 
-.reset, .equals {
+#reset, #equals {
     grid-column: span 2;
 }
 
@@ -67,4 +67,5 @@ button:active {
     font-weight: 700;
     color: #F8F8F8;
     background-color: #1f263b;
+    min-height: 80px;
 }
