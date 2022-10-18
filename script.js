@@ -36,12 +36,12 @@ const equals = document.getElementById("equals").addEventListener("click", funct
     tempInputStorage = "";
     calcDisplay.innerHTML = result;
 
-    console.log(`equals run: 
-    tempStorage is ${tempInputStorage} 
-    input1 is ${input1} 
-    input2 is ${input2}
-    Tracker is ${inputTracker}
-    result is ${result}`);
+    // console.log(`equals run: 
+    // tempStorage is ${tempInputStorage} 
+    // input1 is ${input1} 
+    // input2 is ${input2}
+    // Tracker is ${inputTracker}
+    // result is ${result}`);
 });
 
 const reset = document.getElementById("reset").addEventListener("click", function(){
@@ -105,13 +105,13 @@ function calculate(a, operator, b){
 
 function inputStorer(a){
     tempInputStorage = tempInputStorage.concat(a);
-    console.log(`
-    tempStorage is ${tempInputStorage} 
-    Storage length is ${tempInputStorage.length} 
-    input1 is ${input1} 
-    input2 is ${input2}
-    Tracker is ${inputTracker}
-    result is ${result}`);
+    // console.log(`
+    // tempStorage is ${tempInputStorage} 
+    // Storage length is ${tempInputStorage.length} 
+    // input1 is ${input1} 
+    // input2 is ${input2}
+    // Tracker is ${inputTracker}
+    // result is ${result}`);
     if(input1 == undefined){
     calcDisplay.innerHTML = tempInputStorage;
     }
@@ -139,17 +139,16 @@ function operatorLogic(){
     else if(inputTracker == 3){
         calcDisplay.innerHTML = `${result} ${operator}`
     };
-console.log(`operator run: 
-tempStorage is ${tempInputStorage} 
-input1 is ${input1} 
-input2 is ${input2}
-inputTracker is ${inputTracker}
-result is ${result}`)
+// console.log(`operator run: 
+// tempStorage is ${tempInputStorage} 
+// input1 is ${input1} 
+// input2 is ${input2}
+// inputTracker is ${inputTracker}
+// result is ${result}`)
 };
 /* Calculator Functions End  */
 
 /* 
-Model Solution off of Calc Ya Later
 Intended Behaviour: 
 
 BEHAVIOUR 1
@@ -171,9 +170,9 @@ RESET
 WORKS!
 */
 
-console.log(`on start: 
-tempStorage is ${tempInputStorage} 
-input1 is ${input1} 
-input2 is ${input2}
-Tracker is ${inputTracker}
-result is ${result}`);
+// console.log(`on start: 
+// tempStorage is ${tempInputStorage} 
+// input1 is ${input1} 
+// input2 is ${input2}
+// Tracker is ${inputTracker}
+// result is ${result}`);
