@@ -11,7 +11,7 @@ I undertook this project to:
 
 ## How To Access and Use
 
-You can see how the Calculator functions by visiting this [link](https://v-imv.github.io/js-calculator/) or by clicking on "github-pages" under the heading "Environments" on the right hand side of the GitHub repository screen.
+You can see how the Calculator functions by visiting this [link](https://v-imv.github.io/js-calculator/) or by clicking on the page link under the "About" section on the right hand side of the screen.
 
 ## What I Learned From This Project
 - How to use CSS Grid
