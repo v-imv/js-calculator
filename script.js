@@ -1,30 +1,13 @@
 const calcDisplay = document.querySelector("div.display");
 
 /* Variable Storage Start */
-let displayValue = "";
+let result = 0;
 let input1 = 0;
 let input2 = 0;
 let operator = "+";
 let tempInputStorage = "";
 let inputTracker = 1;
 /* Variable Storage End */
-
-/* Need to set up code so that you can press however many numbers you want (e.g. 1951273) 
-and only store that value in input1 or input2 when you press an operator */
-
-/* I can track between input1 and input2 by storing 1 or 2 in an input tracking variable
-and make the value increment or decrement to change target between input1 and input2
-
-let inputTracker = 1;
-
-if (inputTracker == 1){
-    input1 = value;
-    inputTracker += 1;
-}; else if (inputTracker == 2){
-    input2 = value;
-    inputTracker -= 1;
-};
-*/
 
 /* Keypad Numbers Start  */
 const num7 = document.getElementById("7").addEventListener("click", function(){inputStorer("7");});
@@ -45,8 +28,8 @@ const equals = document.getElementById("equals").addEventListener("click", funct
     input2 = Number(tempInputStorage);
     inputTracker = 1;
     tempInputStorage = "";
-    displayValue = calculate(input1, operator, input2);
-    calcDisplay.innerHTML = displayValue;
+    result = calculate(input1, operator, input2);
+    calcDisplay.innerHTML = result;
 });
 
 const reset = document.getElementById("reset").addEventListener("click", function(){
