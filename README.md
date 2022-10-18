@@ -26,6 +26,7 @@ You can see how the Calculator functions by visiting this [link](https://v-imv.g
 - Can still add logic for:
     - Deleting characters
     - Adding a decimal to a number
-- Could add additional buttons for features such as:
+- Could add additional buttons/features such as:
   - Working with percentages %
   - Changing a number from positive to negative and vice versa
+  - Keyboard support
