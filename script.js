@@ -45,8 +45,9 @@ const equals = document.getElementById("equals").addEventListener("click", funct
 });
 
 const reset = document.getElementById("reset").addEventListener("click", function(){
-    input1 = 0;
-    input2 = 0;
+    result = 0;
+    input1 = undefined;
+    input2 = undefined;
     operator = "+";
     tempInputStorage = "";
     inputTracker = 1;
@@ -167,7 +168,7 @@ BEHAVIOUR 3
 10 + 10 = 20
 RESET
 10 + 10 = 20
-WIP
+WORKS!
 */
 
 console.log(`on start: 
