@@ -1,11 +1,13 @@
 const calcDisplay = document.querySelector("div.display");
 
-/* Variables Start */
+/* Variable Storage Start */
 let displayValue = "";
 let input1 = 5;
 let input2 = 2;
 let operator = "+";
-/* Variables End */
+let tempInputStorage = "";
+let inputTracker = 1;
+/* Variable Storage End */
 
 /* Need to set up code so that you can press however many numbers you want (e.g. 1951273) 
 and only store that value in input1 or input2 when you press an operator */
@@ -25,16 +27,16 @@ if (inputTracker == 1){
 */
 
 /* Keypad Numbers Start  */
-const num7 = document.getElementById("7")
-const num8 = document.getElementById("8")
-const num9 = document.getElementById("9")
-const num4 = document.getElementById("4")
-const num5 = document.getElementById("5")
-const num6 = document.getElementById("6")
-const num1 = document.getElementById("1")
-const num2 = document.getElementById("2")
-const num3 = document.getElementById("3")
-const num0 = document.getElementById("0")
+const num7 = document.getElementById("7").addEventListener("click", function(){inputStorer("7");});
+const num8 = document.getElementById("8").addEventListener("click", function(){inputStorer("8");});
+const num9 = document.getElementById("9").addEventListener("click", function(){inputStorer("9");});
+const num4 = document.getElementById("4").addEventListener("click", function(){inputStorer("4");});
+const num5 = document.getElementById("5").addEventListener("click", function(){inputStorer("5");});
+const num6 = document.getElementById("6").addEventListener("click", function(){inputStorer("6");});
+const num1 = document.getElementById("1").addEventListener("click", function(){inputStorer("1");});
+const num2 = document.getElementById("2").addEventListener("click", function(){inputStorer("2");});
+const num3 = document.getElementById("3").addEventListener("click", function(){inputStorer("3");});
+const num0 = document.getElementById("0").addEventListener("click", function(){inputStorer("0");});
 const period = document.getElementById("period");
 /* Keypad Numbers End */
 
@@ -85,5 +87,11 @@ function calculate(a, operator, b){
     else if(operator == "/"){
         return division(a, b);
     };
+};
+
+function inputStorer(a){
+    tempInputStorage = tempInputStorage.concat(a);
+    console.log(tempInputStorage + " " + tempInputStorage.length);
+    calcDisplay.innerHTML = tempInputStorage;
 };
 /* Calculator Functions End  */
