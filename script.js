@@ -2,8 +2,8 @@ const calcDisplay = document.querySelector("div.display");
 
 /* Variable Storage Start */
 let displayValue = "";
-let input1 = 5;
-let input2 = 2;
+let input1 = 0;
+let input2 = 0;
 let operator = "+";
 let tempInputStorage = "";
 let inputTracker = 1;
@@ -42,6 +42,9 @@ const period = document.getElementById("period");
 
 /* Keypad Functionality Buttons Start */
 const equals = document.getElementById("equals").addEventListener("click", function(){
+    input2 = Number(tempInputStorage);
+    inputTracker = 1;
+    tempInputStorage = "";
     displayValue = calculate(input1, operator, input2);
     calcDisplay.innerHTML = displayValue;
 });
@@ -50,16 +53,71 @@ const reset = document.getElementById("reset").addEventListener("click", functio
     input1 = 0;
     input2 = 0;
     operator = "+";
+    tempInputStorage = "";
+    inputTracker = 1;
+    calcDisplay.innerHTML = 0;
 });
 
 const del = document.getElementById("del");
 /* Keypad Functionality Buttons End */
 
 /* Operator Storing Start */
-const plus = document.getElementById("plus").addEventListener("click", () => operator = "+");
-const minus = document.getElementById("minus").addEventListener("click", () => operator = "-");
-const divide = document.getElementById("divide").addEventListener("click", () => operator = "/");
-const times = document.getElementById("times").addEventListener("click", () => operator = "x");
+const plus = document.getElementById("plus").addEventListener("click", function(){
+    operator = "+";
+    calcDisplay.innerHTML = tempInputStorage + " " + operator;
+    if(inputTracker == 1){
+        input1 = Number(tempInputStorage);
+        inputTracker += 1;
+        tempInputStorage = "";
+    }
+    else if(inputTracker == 2){
+        input2 = Number(tempInputStorage);
+        inputTracker -= 1;
+        tempInputStorage = "";
+    }
+});
+const minus = document.getElementById("minus").addEventListener("click", function(){
+    operator = "-";
+    calcDisplay.innerHTML = tempInputStorage + " " + operator;
+    if(inputTracker == 1){
+        input1 = Number(tempInputStorage);
+        inputTracker += 1;
+        tempInputStorage = "";
+    }
+    else if(inputTracker == 2){
+        input2 = Number(tempInputStorage);
+        inputTracker -= 1;
+        tempInputStorage = "";
+    }
+});
+const divide = document.getElementById("divide").addEventListener("click", function(){
+    operator = "/";
+    calcDisplay.innerHTML = tempInputStorage + " " + operator;
+    if(inputTracker == 1){
+        input1 = Number(tempInputStorage);
+        inputTracker += 1;
+        tempInputStorage = "";
+    }
+    else if(inputTracker == 2){
+        input2 = Number(tempInputStorage);
+        inputTracker -= 1;
+        tempInputStorage = "";
+    }
+});
+const times = document.getElementById("times").addEventListener("click", function(){
+    operator = "x";
+    calcDisplay.innerHTML = tempInputStorage + " " + operator;
+    if(inputTracker == 1){
+        input1 = Number(tempInputStorage);
+        inputTracker += 1;
+        tempInputStorage = "";
+    }
+    else if(inputTracker == 2){
+        input2 = Number(tempInputStorage);
+        inputTracker -= 1;
+        tempInputStorage = "";
+    }
+});
 /* Operator Storing End */
 
 /* Calculator Functions Start */
@@ -92,6 +150,11 @@ function calculate(a, operator, b){
 function inputStorer(a){
     tempInputStorage = tempInputStorage.concat(a);
     console.log(tempInputStorage + " " + tempInputStorage.length);
+    if(input1 == 0 && input2 == 0){
     calcDisplay.innerHTML = tempInputStorage;
+    }
+    else if(input1 > 0){
+        calcDisplay.innerHTML = `${input1} ${operator} ${tempInputStorage}`
+    };
 };
 /* Calculator Functions End  */
