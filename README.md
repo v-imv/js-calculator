@@ -12,7 +12,6 @@ I am undertaking this project in order to learn and practice CSS Grid and to sol
 ## Status
 
 - Semi-Functional for basic operations inputted in a linear fashion but needs a lot of refinement to be more functional and intuitive.
-- Operators code needs to be refactored into a single function
 - Need to add logic for:
     - Deleting characters
     - Adding a decimal to a number
