@@ -25,7 +25,10 @@ const period = document.getElementById("period");
 
 /* Keypad Functionality Buttons Start */
 const equals = document.getElementById("equals").addEventListener("click", function(){
-    if(input2 == undefined){
+    if(input1 == undefined && input2 == undefined){
+        return;
+    }
+    else if(input2 == undefined){
         input2 = Number(tempInputStorage);
         inputTracker = 3;
         result = calculate(input1, operator, input2);
