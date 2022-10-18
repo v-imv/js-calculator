@@ -64,59 +64,19 @@ const del = document.getElementById("del");
 /* Operator Storing Start */
 const plus = document.getElementById("plus").addEventListener("click", function(){
     operator = "+";
-    calcDisplay.innerHTML = tempInputStorage + " " + operator;
-    if(inputTracker == 1){
-        input1 = Number(tempInputStorage);
-        inputTracker += 1;
-        tempInputStorage = "";
-    }
-    else if(inputTracker == 2){
-        input2 = Number(tempInputStorage);
-        inputTracker -= 1;
-        tempInputStorage = "";
-    }
+    operatorLogic();
 });
 const minus = document.getElementById("minus").addEventListener("click", function(){
     operator = "-";
-    calcDisplay.innerHTML = tempInputStorage + " " + operator;
-    if(inputTracker == 1){
-        input1 = Number(tempInputStorage);
-        inputTracker += 1;
-        tempInputStorage = "";
-    }
-    else if(inputTracker == 2){
-        input2 = Number(tempInputStorage);
-        inputTracker -= 1;
-        tempInputStorage = "";
-    }
+    operatorLogic();
 });
 const divide = document.getElementById("divide").addEventListener("click", function(){
     operator = "/";
-    calcDisplay.innerHTML = tempInputStorage + " " + operator;
-    if(inputTracker == 1){
-        input1 = Number(tempInputStorage);
-        inputTracker += 1;
-        tempInputStorage = "";
-    }
-    else if(inputTracker == 2){
-        input2 = Number(tempInputStorage);
-        inputTracker -= 1;
-        tempInputStorage = "";
-    }
+    operatorLogic();
 });
 const times = document.getElementById("times").addEventListener("click", function(){
     operator = "x";
-    calcDisplay.innerHTML = tempInputStorage + " " + operator;
-    if(inputTracker == 1){
-        input1 = Number(tempInputStorage);
-        inputTracker += 1;
-        tempInputStorage = "";
-    }
-    else if(inputTracker == 2){
-        input2 = Number(tempInputStorage);
-        inputTracker -= 1;
-        tempInputStorage = "";
-    }
+    operatorLogic();
 });
 /* Operator Storing End */
 
@@ -155,6 +115,20 @@ function inputStorer(a){
     }
     else if(input1 > 0){
         calcDisplay.innerHTML = `${input1} ${operator} ${tempInputStorage}`
+    };
+};
+
+function operatorLogic(){
+calcDisplay.innerHTML = tempInputStorage + " " + operator;
+    if(inputTracker == 1){
+        input1 = Number(tempInputStorage);
+        inputTracker += 1;
+        tempInputStorage = "";
+    }
+    else if(inputTracker == 2){
+        input2 = Number(tempInputStorage);
+        inputTracker -= 1;
+        tempInputStorage = "";
     };
 };
 /* Calculator Functions End  */
